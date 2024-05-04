@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Saisie des notes</title>
+    <script src="test.js"></script>
+</head>
+<body>
+    <form id="saisieForm" onsubmit="return validateForm()" action="saisie.php" method="post">
+        Numéro de l'élève: <input type="text" name="numEleve"><br>
+        Matière:
+        <select name="matiere">
+            <option value="">Choisir une matière</option>
+            <option value="Algo">Algorithmique et Programmation</option>
+            <option value="BD">Bases de données</option>
+            <option value="TIC">Technologies de l’information et de la communication</option>
+        </select><br>
+        Moyenne: <input type="number" name="moyenne" min="0" max="20"><br>
+        <button type="submit">Valider</button>
+        <button type="button" onclick="resetForm()">Annuler</button>
+    </form>
+</body>
+</html>
